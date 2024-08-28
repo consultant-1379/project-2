@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  metrics-jenkins-api:
+    container_name: metrics-jenkins-api
+    build:
+      context: .
+      dockerfile: ./metrics-jenkins-api/Dockerfile
+    image: metrics-jenkins-api
+  java-application:
+    container_name: java_application
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: metric_application
